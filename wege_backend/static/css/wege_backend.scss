@@ -1,0 +1,78 @@
+@mixin login_signup_template {
+    position: relative;
+    top: 118px;
+    width: 23%;
+    border-style: solid;
+    left: 35%;
+    padding-top: 3%;
+    border-radius: 48px;
+}
+
+
+@mixin input_field_template($display, $width, $text_align: center) {
+    display: $display;
+    margin: 9%;
+    width: $width;
+    border-style: none;
+    border-bottom: solid;
+    outline: none;
+    border-bottom-width: 2px;
+    background: transparent;
+    text-align: $text_align;
+
+    &::placeholder {
+
+        position: relative;
+        text-align: $text_align;
+    }
+
+}
+
+#custom_navbar {
+    padding: 0;
+}
+
+.login_form {
+    @include login_signup_template();
+}
+
+.login_field {
+    @include input_field_template(block, 68%);
+}
+
+#account_login_txt {
+    font-size: 26px;
+    font-weight: 500;
+    display: block;
+}
+
+.login_btn {
+
+    width: 25%;
+    border-radius: 29px;
+    background-color:skyblue;
+    font-weight: bold;
+    transition: all 0.2s;
+    position: relative;
+    margin: 1em;
+
+    &:hover {
+        background-color: white;
+    }
+}
+
+
+
+a{
+    font-size: 18px;
+}
+
+.message_box{
+    text-align: center;
+    font-size: 25px
+}
+
+.alert-error{
+    background-color: red;
+    color: white;
+}

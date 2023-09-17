@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load static %}
+{% block main_content %}
+<form method="POST" action="add_user">
+  {% csrf_token %}
+<center class="login_form">
+    <div>
+      <img src="{% static 'images/login_lock_img.png' %}" alt="login lock symbol" height="60px" />
+      <p id="account_login_txt">Account Registration Form</p>
+    </div>
+
+    {{form}}
+    
+    <button
+      class="login_btn"
+    >
+      Signup
+    </button>
+</center>
+</form>
+{% endblock main_content %}
